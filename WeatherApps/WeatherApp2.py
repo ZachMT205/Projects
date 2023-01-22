@@ -35,7 +35,7 @@ def search():
     weather = get_weather(city)
     if weather:
         location_lbl['text'] = '{}, {}'.format(weather[0], weather[1])
-        img['file'] = "weather_icons\{}@2x.png".format(weather[4])
+        img['file'] = "WeatherApps\{}@2x.png".format(weather[4])
         temp_lbl['text'] = '{:.2f}°C, {:.2f}°F'.format(weather[2], weather[3])
         weather_lbl['text'] = weather[5]
     else:
@@ -67,4 +67,3 @@ weather_lbl = Label(app, text='')
 weather_lbl.pack()
 
 app.mainloop()
-
